@@ -141,7 +141,7 @@ async function searchProductsNode(
   try {
     const response =
       await axios.post(
-        "http://localhost:5001/api/products/searchProductsForRecipe",
+        "https://ai-grocery-product-service.onrender.com/api/products/searchProductsForRecipe",
         {
           ingredients:
             state.recipe.ingredients,
