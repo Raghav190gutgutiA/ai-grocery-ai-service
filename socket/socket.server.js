@@ -11,6 +11,8 @@ async function initSocketServer(httpServer) {
     cors: {
       origin: "*",
     },
+	credentials: true,
+
   });
 
   io.use((socket, next) => {
