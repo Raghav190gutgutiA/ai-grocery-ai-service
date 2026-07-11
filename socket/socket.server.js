@@ -9,10 +9,9 @@ async function initSocketServer(httpServer) {
   const io = new Server(httpServer, {
     path: "/api/socket/socket.io/",
     cors: {
-      origin: "*",
-    },
-	credentials: true,
-
+      origin: true,
+	  credentials: true,
+	}
   });
 
   io.use((socket, next) => {
